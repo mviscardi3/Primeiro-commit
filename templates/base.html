@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block titulo %}{% endblock %} - Meu Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    {% block styles %}{% endblock %} 
+</head>
+<body>
+    <header>
+        <h1>Meu Site - SENAI Londrina</h1>
+        <nav><a href="/">Início</a> | <a href="/usuarios">Usuários</a></nav>
+        <hr>
+    </header>
+    <main>
+        {% block conteudo %}
+        {% endblock %}
+    </main>
+    <footer>
+        <hr>
+        <p>&copy; 2025 - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
